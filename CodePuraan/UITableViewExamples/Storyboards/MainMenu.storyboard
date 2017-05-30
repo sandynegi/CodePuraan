@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mtX-pR-6fc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="DbQ-07-Lws">
+            <objects>
+                <navigationController storyboardIdentifier="StoryboardIdHomeNavCntl" id="mtX-pR-6fc" customClass="BaseNavigationController" customModule="CodePuraan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="egO-FK-9Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FdU-u8-ghR" kind="relationship" relationship="rootViewController" id="Ac1-56-WnV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqm-8E-W5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-967" y="261"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Dco-Ps-nIO">
+            <objects>
+                <viewController storyboardIdentifier="StoryboardIdMainMenu" id="FdU-u8-ghR" customClass="HomeViewController" customModule="CodePuraan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEM-Yt-172"/>
+                        <viewControllerLayoutGuide type="bottom" id="W7q-PX-U3b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zHa-JC-wOs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-BM-7ED">
+                                <rect key="frame" x="60" y="64" width="255" height="50"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GVc-Md-Nj9"/>
+                                </constraints>
+                                <state key="normal" title="Load Demo with navigation controller">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadDemoVCWithNavWithSender:" destination="FdU-u8-ghR" eventType="touchUpInside" id="tRd-Xf-ZlQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uss-XP-toa">
+                                <rect key="frame" x="49" y="134" width="277" height="50"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7xL-Dz-sym"/>
+                                </constraints>
+                                <state key="normal" title="Load Demo without navigation controller">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadDemoVCWithoutNavWithSender:" destination="FdU-u8-ghR" eventType="touchUpInside" id="Koq-15-QI0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="aAr-BM-7ED" secondAttribute="trailing" constant="20" id="0gP-Nf-VF0"/>
+                            <constraint firstItem="Uss-XP-toa" firstAttribute="top" secondItem="aAr-BM-7ED" secondAttribute="bottom" constant="20" id="NoR-aM-GVR"/>
+                            <constraint firstItem="aAr-BM-7ED" firstAttribute="top" secondItem="uEM-Yt-172" secondAttribute="bottom" id="Oif-Vq-kz8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uss-XP-toa" secondAttribute="trailing" constant="20" id="VJe-rU-yIT"/>
+                            <constraint firstItem="Uss-XP-toa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zHa-JC-wOs" secondAttribute="leading" constant="20" id="abv-1m-h1n"/>
+                            <constraint firstItem="Uss-XP-toa" firstAttribute="centerX" secondItem="zHa-JC-wOs" secondAttribute="centerX" id="kTs-F2-m42"/>
+                            <constraint firstItem="aAr-BM-7ED" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zHa-JC-wOs" secondAttribute="leading" constant="20" id="uXQ-nD-2Mh"/>
+                            <constraint firstItem="aAr-BM-7ED" firstAttribute="centerX" secondItem="zHa-JC-wOs" secondAttribute="centerX" id="xmv-LP-UHh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vin-L7-ADF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZa-Ph-2L6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="261.31934032983509"/>
+        </scene>
+    </scenes>
+</document>

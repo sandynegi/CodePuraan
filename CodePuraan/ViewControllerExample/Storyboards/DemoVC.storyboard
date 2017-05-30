@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="KVU-In-cFw">
+            <objects>
+                <navigationController storyboardIdentifier="StoryboardIdDemoNavCntl" id="jgL-DJ-vUz" customClass="BaseNavigationController" customModule="CodePuraan" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mjM-es-W9U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CK0-P6-M1g" kind="relationship" relationship="rootViewController" id="YGd-t5-ZRi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qR-fH-GIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1813" y="188"/>
+        </scene>
+        <!--Demo View Controller-->
+        <scene sceneID="7gA-8B-u1O">
+            <objects>
+                <viewController storyboardIdentifier="StoryboardIdDemo" id="CK0-P6-M1g" customClass="DemoViewController" customModule="CodePuraan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7oX-s1-7DJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Nj-S8-len"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kqA-NA-WNk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOE-AA-GZu">
+                                <rect key="frame" x="10" y="64" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.0039215686269999999" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eOZ-t8-nal"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Dismiss if presented">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissMeWithSender:" destination="CK0-P6-M1g" eventType="touchUpInside" id="E9u-R4-6ay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TOE-AA-GZu" firstAttribute="top" secondItem="7oX-s1-7DJ" secondAttribute="bottom" id="fjb-Vt-KPf"/>
+                            <constraint firstAttribute="trailing" secondItem="TOE-AA-GZu" secondAttribute="trailing" constant="10" id="rza-CX-hkf"/>
+                            <constraint firstItem="TOE-AA-GZu" firstAttribute="leading" secondItem="kqA-NA-WNk" secondAttribute="leading" constant="10" id="sIq-Ys-kYP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TNy-8Y-994"/>
+                    <connections>
+                        <outlet property="btnDismiss" destination="TOE-AA-GZu" id="rGi-Ka-bIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvi-DI-s3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1132" y="193"/>
+        </scene>
+    </scenes>
+</document>
